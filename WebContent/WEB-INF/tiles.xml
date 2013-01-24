@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration
+2.0//EN" "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	<!-- #######  PRINCIPAL  ####### -->
+	<definition name="d_bienvenida" 
+				template="/plantillas/plantilla01.jsp">
+			<put-attribute name="cabecera"
+							value="/paginas/cabeza/cabecera.jsp"/>
+			<put-attribute name="menu"
+							value="/paginas/vacio.jsp"/>
+			<put-attribute name="linkyscript"
+							value="/paginas/links/fancybox_datatable.jsp"/>	
+			<put-attribute name="pie"
+							value="/paginas/pie/pie.jsp"/>													
+	</definition>
+	
+	<!-- ####### REQUERIMIENTO ######### -->	
+	<definition name="d_requerimiento" extends="d_bienvenida">
+			<put-attribute name="menu"
+							value="/paginas/requerimiento.jsp"/>	
+	</definition>
+	
+	<definition name="d_requerimiento_solicitud" extends="d_bienvenida">
+			<put-attribute name="menu"
+							value="/paginas/requerimientoSolicitud.jsp"/>
+			<put-attribute name="linkyscript"
+							value="/paginas/links/vacio.jsp"/>		
+	</definition>
+	
+	<definition name="d_requerimiento_reporte" extends="d_bienvenida">
+			<put-attribute name="menu"
+							value="/paginas/requerimientoReporte.jsp"/>	
+	</definition>
+	
+	<!-- ######### SISTEMA ########## -->
+	<definition name="d_sistema" extends="d_bienvenida">
+			<put-attribute name="menu"
+							value="/paginas/sistema.jsp"/>	
+	</definition>
+	
+	<definition name="d_sistema_detalle" extends="d_bienvenida">
+			<put-attribute name="menu"
+							value="/paginas/sistemaDetalle.jsp"/>
+			<put-attribute name="linkyscript"
+							value="/paginas/links/fancybox.jsp"/>		
+	</definition>
+	
+	<!-- ######### PROYECTO ########## -->
+	<definition name="d_proyecto" extends="d_bienvenida">
+			<put-attribute name="menu"
+							value="/paginas/proyecto.jsp"/>	
+			<put-attribute name="linkyscript"
+							value="/paginas/links/fancybox_datatable2.jsp"/>	
+	</definition>
+	
+	<definition name="d_proyecto_detalle" extends="d_bienvenida">
+			<put-attribute name="menu"
+							value="/paginas/proyectoDetalle.jsp"/>
+			<put-attribute name="linkyscript"
+							value="/paginas/links/fancybox.jsp"/>		
+	</definition>
+	
+	<!-- ######### DESARROLLO ########## -->
+	<definition name="d_desarrollo" extends="d_bienvenida">
+			<put-attribute name="menu"
+							value="/paginas/desarrollo.jsp"/>	
+			<put-attribute name="linkyscript"
+							value="/paginas/links/fancy_data_tip.jsp"/>	
+	</definition>
+	
+	<definition name="d_desarrollo_detalle" extends="d_bienvenida">
+			<put-attribute name="menu"
+							value="/paginas/desarrolloDetalle.jsp"/>
+			<put-attribute name="linkyscript"
+							value="/paginas/links/fancy_data_calen.jsp"/>		
+	</definition>
+	
+	<definition name="d_desarrollo_registro" extends="d_bienvenida">
+			<put-attribute name="menu"
+							value="/paginas/desarrolloRegistro.jsp"/>
+			<put-attribute name="linkyscript"
+							value="/paginas/links/fancybox_datatable.jsp"/>	
+	
+		
+	</definition>
+	
+	<!-- ######### CALIDAD ########## -->
+	<definition name="d_calidad" extends="d_bienvenida">
+			<put-attribute name="menu"
+							value="/paginas/calidad.jsp"/>	
+			<put-attribute name="linkyscript"
+							value="/paginas/links/fancy_data_tip.jsp"/>	
+	</definition>
+	
+	<definition name="d_calidad_detalle" extends="d_bienvenida">
+			<put-attribute name="menu"
+							value="/paginas/calidadDetalle.jsp"/>
+			<put-attribute name="linkyscript"
+							value="/paginas/links/fancy_data_calen.jsp"/>		
+	</definition>
+	
+	<definition name="d_calidad_registro" extends="d_bienvenida">
+			<put-attribute name="menu"
+							value="/paginas/calidadRegistro.jsp"/>
+			<put-attribute name="linkyscript"
+							value="/paginas/links/fancybox_datatable.jsp"/>	
+	
+		
+	</definition>
+	
+	<!-- ######### INFORME ########## -->
+	<definition name="d_informe" extends="d_bienvenida">
+			<put-attribute name="menu"
+							value="/paginas/informe.jsp"/>	
+			<put-attribute name="linkyscript"
+							value="/paginas/links/fancy_data_tip.jsp"/>	
+	</definition>
+	
+	<!-- -######## ERROR ############# -->
+	<definition name="d_error" extends="d_bienvenida">
+			<put-attribute name="menu"
+							value="/paginas/error.jsp"/>	
+			<put-attribute name="linkyscript"
+							value="/paginas/links/fancy_data_tip.jsp"/>	
+	</definition>
+	
+</tiles-definitions>
+

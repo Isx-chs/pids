@@ -1,0 +1,35 @@
+/* CSS crunched with Crunch - http://crunchapp.net/ */
+.border{border-radius:8px;height:15px;width:15px;float:left;}
+body{background-image:url(../img/fondo_1024.jpg);}
+.contenedor{font-size:17px;font-family:'Buenard',serif;margin:0 auto;width:900px;}
+a{text-decoration:none;color:black;}
+b{font-weight:bold;}
+.tooltip{background:#cadbf1;padding:5px 3px;border-radius:10px;}
+div.ero{background:red;border-radius:8px;height:15px;width:15px;float:left;}
+div.pend{background:#cdbc41;border-radius:8px;height:15px;width:15px;float:left;}
+div.aprob{background:#51cf49;border-radius:8px;height:15px;width:15px;float:left;}
+div.proc{background:#504cff;border-radius:8px;height:15px;width:15px;float:left;}
+#login{background:#1196b5;background:rgba(43, 136, 173, 0.5);border-radius:20px;height:250px;border:2px solid #282d2e;color:#a3a3a3;margin:90px auto 0 auto;width:300px;}#login h2{background:#282d2e;background:rgba(40, 45, 46, 0.91);border-radius:15px 15px 0 0;font-size:1.3em;padding:10px 0;text-align:center;}
+#login form{padding:25px 30px;}
+#login label{font-weight:bold;color:#1e0000;}
+#login input{border-radius:5px;border:1.6px solid #140000;padding:5px 10px;-webkit-transition:all 0.4s ease-in-out;-moz-transition:all 0.4s ease-in-out;transition:all 0.4s ease-in-out;}
+#login input:focus{border:1px solid #58D4EF;width:110px;}
+#login label,#login input{width:100px;float:left;margin-top:15px;}
+#principal{background-color:#282d2e;color:#a3a3a3;border-bottom-right-radius:12px;border-bottom-left-radius:12px;}#principal h1{text-align:center;font-size:2.1em;padding:20px 0;}
+#principal ul{padding:20px;}#principal ul li{display:inline;margin-left:15px;}
+#principal ul .mensaje{margin-left:320px;position:absolute;}#principal ul .mensaje div{border-radius:25px;border:1px solid #a3a3a3;color:#282d2e;background:#a3a3a3;width:15px;float:right;text-align:center;top:-5px;position:relative;margin-left:5px;}
+#menu ul.principal{padding:25px 0 7px 0;margin-left:-7px;}#menu ul.principal li{background-color:#1196b5;background:rgba(43, 136, 173, 0.5);display:inline;margin-left:7px;padding:4px 12px;border-top-left-radius:12px;border-top-right-radius:12px;}#menu ul.principal li a{color:#1e0000;}
+#menu ul.principal .selected{background-color:#282d2e;}#menu ul.principal .selected a{color:#a3a3a3;}
+#menu article{border:2px solid #282d2e;border-bottom-right-radius:12px;border-bottom-left-radius:12px;background-color:#1196b5;background:rgba(43, 136, 173, 0.5);}#menu article #cabecera{padding:18px 20px;margin-bottom:25px;background-color:#282d2e;}#menu article #cabecera h2{font-size:1.2em;text-align:center;font-size:1.9em;color:#a3a3a3;}
+#menu article #cabecera ul{margin-top:20px;}
+#menu article #cabecera li{display:inline;padding:1px 20px;margin-left:15px;border:1px solid #a3a3a3;border-radius:15px;background:#a3a3a3;font-size:0.9em;}#menu article #cabecera li a img{position:relative;top:4px;}
+#menu article .data{padding:0 20px;}#menu article .data select{margin-bottom:15px;margin-right:25px;}
+#menu article .data table{margin-bottom:20px;}#menu article .data table .sis-fin{float:right;}
+#menu article .data .dataTables_info{clear:both!important;}
+#menu article .registro{padding-right:50px;}#menu article .registro h3{text-align:center;font-size:1.3em;margin-bottom:30px;}
+#menu article .registro form,#menu article .registro .formulario{margin-left:70px;margin-bottom:30px;}#menu article .registro form li,#menu article .registro .formulario li{padding:7px 0;}#menu article .registro form li .centrado,#menu article .registro .formulario li .centrado{margin-left:70px;margin-top:20px;}
+#menu article .registro form li .agregar,#menu article .registro .formulario li .agregar{margin-left:20px;position:relative;top:15px;margin-top:-20px;}
+#menu article .registro form li a,#menu article .registro .formulario li a{margin-left:10px;}
+#menu article .registro form li label,#menu article .registro .formulario li label{margin-right:25px;width:100px;margin-bottom:5px;margin-top:15px;}
+#menu article .registro form li textarea,#menu article .registro .formulario li textarea{width:380px;height:150px;padding:10px 20px;border-radius:10px;display:block;}
+#menu article .detalle ul{margin-left:50px;margin-bottom:5px;}#menu article .detalle ul li{padding:8px 20px;}

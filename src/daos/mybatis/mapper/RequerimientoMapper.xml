@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="daos.mybatis.mapper.RequerimientoMapper">
+ <resultMap id="rmRequerimientoModel" 
+                type="requerimientoDTO">
+        <id column="req_id" 
+            property="req_id" jdbcType="INTEGER"/>
+        <result column="req_titulo" 
+            property="req_titulo" jdbcType="VARCHAR"/>    
+        <result column="req_fecha" 
+            property="req_fecha" jdbcType="DATE"/>
+        <result column="req_obsr" 
+            property="req_obsr" jdbcType="VARCHAR"/>       
+        <result column="req_id_area" 
+            property="req_id_area" jdbcType="INTEGER"/>
+        <result column="req_id_solicitante" 
+            property="req_id_solicitante" jdbcType="INTEGER"/>
+        <result column="req_id_estado" 
+            property="req_id_estado" jdbcType="INTEGER"/>
+        <result column="req_importancia" 
+            property="req_importancia" jdbcType="INTEGER"/>
+        <result column="req_prioridad" 
+            property="req_prioridad" jdbcType="INTEGER"/>
+        <result column="req_id_responsble" 
+            property="req_id_responsble" jdbcType="INTEGER"/>
+        <result column="req_recursos" 
+            property="req_recursos" jdbcType="VARCHAR"/> 
+        <result column="req_estado_final" 
+            property="req_estado_final" jdbcType="INTEGER"/>
+        <result column="req_etapa_id" 
+            property="req_etapa_id" jdbcType="INTEGER"/>        
+    </resultMap>
+</mapper>

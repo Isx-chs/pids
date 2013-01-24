@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="daos.mybatis.mapper.DetalleMapper">	
+	<resultMap id="rmDetalleModel" 
+                type="detalleDTO">
+        <id column="det_id" 
+            property="det_id" jdbcType="INTEGER"/>
+        <result column="det_id_req" 
+            property="det_id_req" jdbcType="INTEGER"/>    
+        <result column="det_actividad" 
+            property="det_actividad" jdbcType="VARCHAR"/>
+         <result column="det_fec_ini" 
+            property="det_fec_ini" jdbcType="DATE"/>
+         <result column="det_fec_fin" 
+            property="det_fec_fin" jdbcType="DATE"/>
+        <result column="det_encargado" 
+            property="det_encargado" jdbcType="INTEGER"/> 
+        <result column="det_estado" 
+            property="det_estado" jdbcType="INTEGER"/>     
+         <result column="det_descripcion" 
+            property="det_descripcion" jdbcType="VARCHAR"/>
+        <result column="det_tipo" 
+            property="det_tipo" jdbcType="INTEGER"/>               
+    </resultMap>
+</mapper>

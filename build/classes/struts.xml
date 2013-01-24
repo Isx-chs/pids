@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.custom.i18n.resources"
+			 value="TextosI18N"></constant>
+	<constant name="struts.ui.theme" value="simple" />
+	
+	<include file="tags-struts2.xml" />
+	
+      <package name="default" extends="tiles-default"> 
+           <action name="loginEmpleado"
+           		   class="action.IdentificadorAction">
+           		<result name="success" type="tiles">d_bienvenida</result>
+           		<result name="error">/index.jsp</result>
+           		<result name="login">/index.jsp</result>
+
+           </action>           
+           
+           <!-- ####### REQUERIMIENTO ######### -->	
+           <action name="requerimiento"
+           		   class="action.RequerimientoAction"
+           		   method="inicializar">
+           		<result type="tiles">d_requerimiento</result>
+           		<result name="error">/error.jsp</result>
+           </action>
+           
+           <action name="requerimientoSolicitud"
+           		   class="action.RequerimientoAction"
+           		   method="inicializarEnvio">
+           		<result type="tiles">d_requerimiento_solicitud</result>
+           		<result name="error">/error.jsp</result>
+           </action> 
+          
+           
+           <action name="cargarCombo"
+           		   class="action.RequerimientoAction"
+           		   method="cargarModulos">
+           		<result  name="success" type="freemarker">/paginas/options.ftl</result>  
+           </action> 
+           
+           <action name="insertar"
+           		   class="action.RequerimientoAction"
+           		   method="insertar">
+           		<result type="tiles">d_requerimiento</result>
+           		<result name="error">/error.jsp</result>
+           </action> 
+           
+           <action name="requerimientoReporte"
+           		   class="action.RequerimientoAction"
+           		   method="reporte">
+           		<result type="tiles">d_requerimiento_reporte</result>
+           		<result name="error">/error.jsp</result>
+           </action>
+           <!-- ######### SISTEMA ########## -->
+           <action name="sistema"
+           		   class="action.SistemaAction"
+           		   method="inicializar">
+           		<result type="tiles">d_sistema</result>
+           		<result name="error">/error.jsp</result>
+           </action>
+           
+           <action name="sistemaDetalle"
+           		   class="action.SistemaAction"
+           		   method="inicializarDetalle">
+           		<result type="tiles">d_sistema_detalle</result>
+           		<result name="error">/error.jsp</result>
+           </action>   
+           
+            <action name="evaluarDetalle"
+           		   class="action.SistemaAction"
+           		   method="evaluarDetalle">
+           		<result type="tiles">d_sistema</result>
+           		<result name="none" type="tiles">d_sistema_detalle</result>
+           		<result name="error">/error.jsp</result>
+           </action>
+           <!-- ######### PROYECTO ########## -->
+           <action name="proyecto"
+           		   class="action.ProyectoAction"
+           		   method="inicializar">
+           		<result type="tiles">d_proyecto</result>
+           		<result name="error">/error.jsp</result>
+           </action>
+           
+           <action name="proyectoDetalle"
+           		   class="action.ProyectoAction"
+           		   method="inicializarDetalle">
+           		<result type="tiles">d_proyecto_detalle</result>
+           		<result name="error">/error.jsp</result>
+           </action>
+           
+           <action name="registrarProyecto"
+           		   class="action.ProyectoAction"
+           		   method="registrarProyecto">
+           		<result type="tiles">d_proyecto</result>
+           		<result name="none" type="tiles">d_proyecto_detalle</result>
+           		<result name="error">/error.jsp</result>
+           </action>
+           
+           
+           <!-- ######### DESARROLLO ########## -->
+           <action name="desarrollo"
+           		   class="action.DesarrolloAction"
+           		   method="inicializar">
+           		<result type="tiles">d_desarrollo</result>
+           		<result name="error">/error.jsp</result>
+           </action>
+           
+           <action name="desarrolloDetalle"
+           		   class="action.DesarrolloAction"
+           		   method="inicializarDetalle">
+           		<result type="tiles">d_desarrollo_detalle</result>
+           		<result name="error">/error.jsp</result>
+           </action>     
+           
+           <action name="desarrolloRegistro"
+           		   class="action.DesarrolloAction"
+           		   method="inicializarRegistro">
+           		<result type="tiles">d_desarrollo_registro</result>
+           		<result name="error">/error.jsp</result>
+           </action>  
+           
+           <action name="guardarDetalle" class="action.DesarrolloAction" method="guardarDetalle">
+           		<result type="tiles">d_desarrollo_detalle </result>
+           		<result name="none" type="tiles">d_desarrollo_detalle</result>
+           		<result name="error">/error.jsp</result>
+           </action>
+           
+           <action name="actualizarDetalle" class="action.DesarrolloAction" method="actualizarDetalle">
+           		<result type="tiles">d_desarrollo_registro</result>
+           		<result name="error">/error.jsp</result>
+           </action>
+           
+           <action name="obtenerRegistro" class="action.DesarrolloAction" method="obtenerDetalleRegistro">
+           		<result type="tiles">d_desarrollo_registro</result>
+           		<result name="error">/error.jsp</result>
+           </action>
+           <!-- ######### CALIDAD ########## -->
+           <action name="calidad"
+           		   class="action.CalidadAction"
+           		   method="inicializar">
+           		<result type="tiles">d_calidad</result>
+           		<result name="error">/error.jsp</result>
+           </action>
+           
+           <action name="calidadDetalle"
+           		   class="action.CalidadAction"
+           		   method="inicializarDetalle">
+           		<result type="tiles">d_calidad_detalle</result>
+           		<result name="error">/error.jsp</result>
+           </action>     
+           
+           <action name="calidadRegistro"
+           		   class="action.CalidadAction"
+           		   method="inicializarRegistro">
+           		<result type="tiles">d_calidad_registro</result>
+           		<result name="error">/error.jsp</result>
+           </action>  
+           
+            <action name="guardarDetalleCalidad"
+           		   class="action.CalidadAction"
+           		   method="guardarDetalleCalidad">
+           		<result type="tiles">d_calidad_detalle</result>
+           		<result name="error">/error.jsp</result>
+           </action>  
+           
+            <action name="obtenerRegistroCalidad" class="action.CalidadAction" method="obtenerDetalleRegistro">
+           		<result type="tiles">d_calidad_registro</result>
+           		<result name="error">/error.jsp</result>
+           </action>
+           
+            <action name="actualizarDetalleCalidad" class="action.CalidadAction" method="actualizarDetalle">
+           		<result type="tiles">d_calidad_registro</result>
+           		<result name="error">/error.jsp</result>
+           </action>
+           
+           <!-- ######### INFORME ########## -->
+           <action name="informe"
+           		   class="action.InformeAction"
+           		   method="inicializar">
+           		<result type="tiles">d_informe</result>
+           		<result name="error">/error.jsp</result>
+           </action>
+            
+            <action name="obtenerRegistroInforme" class="action.InformeAction" method="obtenerRegistro">
+           		<result type="tiles">d_informe</result>
+           		<result name="error">/error.jsp</result>
+           </action>     
+                 
+                  <action name="insertar"
+           		   class="action.RequerimientoAction"
+           		   method="insertar">
+           		<result type="tiles">d_requerimiento</result>
+           		<result name="error">/error.jsp</result>
+           </action>      
+      </package>
+</struts>

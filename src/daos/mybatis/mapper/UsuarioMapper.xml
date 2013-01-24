@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="daos.mybatis.mapper.UsuarioMapper">	
+	<resultMap id="rmUsuarioModel" 
+                type="usuarioDTO">
+        <id column="us_id" 
+            property="us_id" jdbcType="INTEGER"/>
+        <result column="us_user" 
+            property="us_user" jdbcType="VARCHAR"/>    
+        <result column="us_nombre" 
+            property="us_nombre" jdbcType="VARCHAR"/>
+         <result column="us_apellido" 
+            property="us_apellido" jdbcType="VARCHAR"/>
+         <result column="us_per_id" 
+            property="us_per_id" jdbcType="INTEGER"/>
+        <result column="us_area_id" 
+            property="us_area_id" jdbcType="INTEGER"/>             
+    </resultMap>
+    
+    <resultMap id="rmModuloModel" 
+                type="moduloDTO">
+        <id column="mod_id" 
+            property="mod_id" jdbcType="INTEGER"/>
+        <result column="mod_nombre" 
+            property="mod_nombre" jdbcType="VARCHAR"/>    
+        <result column="mod_key" 
+            property="mod_key" jdbcType="VARCHAR"/>     
+         <result column="mod_link" 
+            property="mod_link" jdbcType="VARCHAR"/>        
+    </resultMap>
+    
+     <resultMap id="rmAreaModel" 
+                type="areaDTO">
+        <id column="area_id" 
+            property="area_id" jdbcType="INTEGER"/>
+        <result column="area_descripcion" 
+            property="area_descripcion" jdbcType="VARCHAR"/>           
+    </resultMap>
+</mapper>
