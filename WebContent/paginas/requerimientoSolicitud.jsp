@@ -1,5 +1,6 @@
-<%@taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ taglib prefix="sx" uri="/struts-dojo-tags"%> 
+<sx:head debug="true" cache="false" compressed="false" />
 
 <ul class="principal">
 	<s:iterator value="#session.modulo" var="modu">
@@ -14,26 +15,27 @@
 		</li>
 	</s:iterator>
 </ul>
-<s:url id="detailUrl" action="cargarCombo"/>
+
 <article>
 	<div id="cabecera">
 		<h2>Enviar Requerimiento</h2>
 	</div>
 	<div class="registro">
 		<form method="post" action="insertar" id="selectForm">
+		<s:url id="detailUrl" action="cargarCombo"/>
 			<ul>
 				<li>
 					<label><b>Titulo de Requerimiento: </b></label><input type="text" required="required" name="requerimiento.req_titulo"/>
 				</li>
 				<li>
 					<label><b>Sistema: </b></label>
-					<sx:autocompleter name="sistema" list="sistemas" value="" 
+					<sx:autocompleter name="requerimiento.req_sistema" list="sistemas" value="" 
 						notifyTopics="changed" forceValidOption="true" id="sistema"/>
 				</li>
 				<li>
 					<label><b>Modulo: </b></label>
 					<sx:autocompleter href="%{#detailUrl}" formId="selectForm"
-					listenTopics="changed" id="mod"/>
+					listenTopics="changed" id="modu" name="requerimiento.req_modulo"/>
 				</li>
 				<li>
 					<label><b>Archivo :</b></label><s:file name="requerimiento.req_obsr" />

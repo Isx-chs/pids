@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50524
 File Encoding         : 65001
 
-Date: 2012-12-02 08:15:44
+Date: 2013-01-24 23:36:42
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -163,7 +163,7 @@ CREATE TABLE `dawi_requerimiento` (
   `req_sistema` varchar(250) DEFAULT NULL,
   `req_modulo` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`req_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dawi_requerimiento
@@ -205,6 +205,9 @@ INSERT INTO `dawi_requerimiento` VALUES ('34', 'INGRESO 6', '2012-12-01', null, 
 INSERT INTO `dawi_requerimiento` VALUES ('35', 'INGRESO 7', '2012-12-01', null, '1', '1', '1', null, null, null, null, '2', '2', null, null);
 INSERT INTO `dawi_requerimiento` VALUES ('36', 'INGRESO 8', '2012-12-01', null, '1', '1', '1', null, null, null, null, '2', '2', null, null);
 INSERT INTO `dawi_requerimiento` VALUES ('37', 'INGRESO 10', '2012-12-01', null, '1', '1', '1', null, null, null, null, '2', '2', null, null);
+INSERT INTO `dawi_requerimiento` VALUES ('38', 'j', '2013-01-24', null, '1', '1', '1', null, null, null, null, '2', '2', null, null);
+INSERT INTO `dawi_requerimiento` VALUES ('39', 'a', '2013-01-24', null, '1', '1', '1', null, null, null, null, '2', '2', null, null);
+INSERT INTO `dawi_requerimiento` VALUES ('40', 'INGRESO 10', '2013-01-24', null, '1', '1', '1', null, null, null, null, '2', '2', 'Sistema R.R.H.H.', 'type');
 
 -- ----------------------------
 -- Table structure for `dawi_usuario`
@@ -398,14 +401,13 @@ DELIMITER ;
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `sp_insertarsistema`;
 DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insertarsistema`(
-	IN req_titulo VARCHAR(250), 
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insertarsistema`(IN req_titulo VARCHAR(250), 
 	IN req_id_area  INT,
-	IN req_id_solicitante INT)
+	IN req_sistema VARCHAR(250), IN req_modulo VARCHAR(250), IN req_id_solicitante INT)
 BEGIN
 	
 	
-	INSERT INTO dawi_requerimiento(req_titulo,req_fecha,req_id_area,req_id_solicitante,req_id_estado,req_estado_final,req_etapa_id) values(req_titulo,now(),req_id_area,req_id_solicitante,1,2,2);
+	INSERT INTO dawi_requerimiento(req_titulo,req_fecha,req_id_area,req_id_solicitante,req_id_estado,req_estado_final,req_etapa_id, req_sistema, req_modulo) values(req_titulo,now(),req_id_area,req_id_solicitante,1,2,2,req_sistema, req_modulo);
 		
 	
 	END
